@@ -18,21 +18,15 @@ const constants = styles.constants;
 class CalculatorApp extends Component {
   constructor(props) {
     super(props);
-
     this.state =
       {
         displayText: '',
         numberContainerA: 0,
         numberContainerB: 0,
         currentOperand: ''
-
       };
-
   }
-
-
   onDigitClick(digit) {
-
     this.setState({ displayText: this.state.displayText += digit });
     console.log('numberContainerB = ' + this.state.numberContainerB)
     console.log('numberContainerA = ' + this.state.numberContainerA)
@@ -41,15 +35,12 @@ class CalculatorApp extends Component {
     } else {
       this.setState({ numberContainerB: parseInt(this.state.displayText) })
     }
-
   }
   onClearClick() {
     this.setState({ displayText: '', numberContainerA: 0, numberContainerB: 0, currentOperand: '' });
-
   }
   onOperandClick() {
     this.setState({ currentOperand: '+', displayText: '' });
-
   }
   onEqualsClick() {
     if (this.state.currentOperand == '+') {
@@ -59,16 +50,10 @@ class CalculatorApp extends Component {
 
       this.setState({ displayText: result.toString() });
     }
-
-
     this.setState({ currentOperand: '', numberContainerA: 0, numberContainerB: 0 })
-
   }
 
   render() {
-
-
-
     return (
       <View style={styles.app}>
         <StatusBar title="My Calculator" />
