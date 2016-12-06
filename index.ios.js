@@ -1,6 +1,10 @@
 'use strict'
 
 //This is a comment to test the pull request from Byron's machine. 
+
+//Git Kraken Comment Push
+
+
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -10,6 +14,7 @@ import {
   TouchableHighlight,
   TextInput
 } from 'react-native';
+
 const DisplayInputField = require('./components/DisplayInputField');
 const StatusBar = require('./components/StatusBar');
 const ButtonDigit = require('./components/ButtonDigit');
